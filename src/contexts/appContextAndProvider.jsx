@@ -25,7 +25,6 @@ function AppContextAndProvider({ children }) {
                 message: newResponse,
             },
         ]);
-        console.log('newResponse', newResponse);
         receiveText(newResponse);
     }, []);
 

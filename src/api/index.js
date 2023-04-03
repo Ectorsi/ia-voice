@@ -10,7 +10,7 @@ export const getOpenAI = async (message, subject) => {
             // frequency_penalty: 0.5,
             // presence_penalty: 0.0,
             // stop: ["You:"]
-            stop: '\n',
+            // stop: '\n',
             messages: [
                 { role: 'system', content: `Vamos falar sobre ${subject}` },
                 { role: 'user', content: message },
@@ -21,7 +21,6 @@ export const getOpenAI = async (message, subject) => {
                 Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
             },
         });
-
         return response.data.choices[0].message.content;
     } catch (error) {
         console.error(error);

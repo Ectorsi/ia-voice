@@ -10,7 +10,7 @@ import InputText from '../../components/InputText';
 
 function Chat() {
     const { handleResponse, handleMessage } = useAppContext();
-    const [transcript, listening, handleStart, handleStop] = useTranscriptVoice();
+    const [transcript, listening, handleStart, handleStop, resetTranscript] = useTranscriptVoice();
 
     const [subject, setSubject] = useState('');
 
@@ -24,7 +24,7 @@ function Chat() {
         if (!listening && transcript) {
             getApiData(transcript);
             handleMessage(transcript);
-            console.log('Envio de texto', transcript);
+            resetTranscript();
         }
     }, [listening]);
 

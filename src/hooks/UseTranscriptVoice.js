@@ -10,7 +10,7 @@ export const useTranscriptVoice = () => {
 
     const handleStart = () => {
         SpeechRecognition.startListening({
-            continuous: true,
+            continuous: false,
             language: 'en-US',
         });
     };
