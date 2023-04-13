@@ -1,8 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const BodyChatContainer = styled.div`
     height: 80vh;
     width: 50vw;
+    overflow-y: scroll;
 
     border: 1.5px solid #16161d9c;
     border-radius: 20px;
@@ -18,7 +19,6 @@ export const BodyChatContainer = styled.div`
     padding: 15px;
 
     font-size: 12px;
-    overflow-y: auto;
 `;
 
 export const ContentLeft = styled.span`
